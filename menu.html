@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- styles sheet -->
+    <link rel="stylesheet" href="styles/menustyles.css" />
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="images/emoji-96.png" />
+
+    <!-- Google Fonts api -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Explora&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Menu</title>
+  </head>
+  <body>
+    <!-- nav  -->
+
+    <nav>
+      <a id="logo" href="index.html">Coffee Aficionado</a>
+      <img id="logo-img" src="images/logoImage.jpeg" />
+
+      <li><a href="index.html"></a></li>
+      <li><a href="/html5/engageoptions.html">Services</a></li>
+      <li><a href="index.html">Home</a></li>
+    </nav>
+    <!-- end of nav -->
+
+    <div class="menu">
+      <table>
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Item</th>
+            <th>Size</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>1</th>
+            <td>Coffee</td>
+            <td>Reg | Med | Large</td>
+            <td>$ 2.35 | $ 2.55 | $2.75</td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td>Expresso</td>
+            <td>Reg | Med | Large</td>
+            <td>$ 3.25 | $ 3.65 | $ 4.25</td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td>Decaf</td>
+            <td>Reg | Med | Large</td>
+            <td>$ 3.25 | $ 3.75 | $ 4.35</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="orderform">
+      <h3 style="font-family: Explora; font-size: 42px; font-weight: bold">
+        Let's Order
+      </h3>
+      <form action="html5/engageoptions.html">
+        <div><label>First Name</label></div>
+        <span>
+          <input
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="Your name.."
+          />
+        </span>
+
+        <label>Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+        />
+
+        <label>Item</label>
+        <select id="item" name="item">
+          <option value="select">Select Item</option>
+          <option value="Coffee">Coffee</option>
+          <option value="Espresso">Espresso</option>
+          <option value="Decaf">Decaf</option>
+        </select>
+
+        <label>Size</label>
+        <select id="size" name="size">
+          <option value="select">Select size</option>
+          <option value="Coffee">Regular</option>
+          <option value="Espresso">Medium</option>
+          <option value="Decaf">Large</option>
+        </select>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

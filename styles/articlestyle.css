@@ -1,0 +1,78 @@
+body {
+  background-color: #d8c3a5;
+}
+
+.container {
+  text-align: center;
+  margin: 200px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: Explora;
+  font-weight: bold;
+  font-size: 32px;
+  background-color: black;
+  box-shadow: 10px 10px 10px 10px #6f4e37;
+  color: white;
+}
+.container:hover {
+  transform: perspective(50px) translateZ(5px);
+  transition: 0.5s ease-in;
+  box-shadow: 10px 10px 10px 10px #9a592a;
+}
+
+.individual {
+  padding: 10px;
+}
+
+li {
+  display: inline;
+  float: right;
+  padding-right: 15px;
+  font-family: Explora;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+#logo {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  float: left;
+  color: black;
+  font-family: Explora;
+  font-weight: bold;
+  font-size: 48px;
+  text-decoration: none;
+}
+
+#logo-img {
+  width: 50px;
+  height: 55px;
+  margin-top: 10px;
+  padding-left: -20px;
+  margin-bottom: 20px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  top: 0%;
+  width: 100%;
+}
+
+li a:hover {
+  background-color: #6f4e37;
+  border-radius: 15px 0px 20px 0px;
+  transition: all 0.5s ease-in-out;
+}
