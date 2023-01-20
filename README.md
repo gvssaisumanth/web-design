@@ -9,8 +9,8 @@ I gave a zoom in effect for the containers by translating Y axis on page load.
 
 
 Tags used:
-<img>, <li>, <div> ,<button>, <table> ,<span>,<label>,<form>,<select>,<input>,<select>,<option>, <link>,<title>,<head>,<h1>,<h2>,<h3>,
-<table>,<td>,<tr>
+<img> <li> <div> <button> <table> <span> <label> <form> <select> <input> <select> <option> <link> <title> <head> <h1> <h2> <h3>
+<table> <td> <tr>
         
 <html> - It is a container of all HTML elements in the document
 <head> - It is a container of metadata
