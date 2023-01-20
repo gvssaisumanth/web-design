@@ -6,6 +6,9 @@ Implementation:
 I have designed a coffee website with 5 pages
 Home page, Order, Services, Media and article page
 
+I have used CSS animation using key frames.
+I gave a zoom in effect for the containers by translating Y axis on page load.
+
 Tags Used: 
 
 <html>, <head>, <link>, <title>, <body>, <header>, <div>,
