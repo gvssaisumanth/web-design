@@ -1,0 +1,370 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+}
+
+.navbar {
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0d1321;
+  color: white;
+}
+
+.navbar-brand {
+  float: left;
+  text-decoration: none;
+  font-family: "sans-serif";
+  font-size: 19px;
+  padding: 10px;
+  color: white;
+}
+
+.navbar-nav {
+  margin: 0%;
+  text-align: right;
+}
+
+.navbar .navbar-nav .nav-item {
+  display: inline;
+  list-style: none;
+}
+
+.navbar-nav .nav-item a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  padding: 0.9em 0.7em;
+  color: white;
+}
+
+.toggle-collapse {
+  float: right;
+  width: 45px;
+  height: 32px;
+  margin: 0.4em 0.7em;
+  background-color: transparent;
+  color: rgba(232, 232, 232, 0.7);
+  border: 1px solid rgba(232, 232, 232, 0.3);
+  border-radius: 3px;
+  cursor: pointer;
+  display: none;
+}
+
+.toggle-collapse:hover {
+  color: rgb(232, 232, 232);
+}
+
+@media screen and (max-width: 456px) {
+  .navbar-brand {
+    display: inline-block;
+    float: none;
+  }
+
+  .toggle-collapse {
+    display: inline-block;
+  }
+
+  .navbar-nav {
+    color: white;
+    padding: 0%;
+    text-align: center;
+  }
+  .navbar .navbar-nav .nav-item {
+    display: block;
+    list-style: none;
+  }
+  .navbar-collapse {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    height: 0vh;
+    transition: all 499ms ease-out;
+  }
+
+  .collapse {
+    height: 30vh;
+  }
+}
+
+/* .container {
+  position: relative;
+  top: 15%;
+  width: 75%;
+  min-height: 400px;
+  height: auto;
+  left: 10%;
+  right: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  position: relative;
+  margin-top: 30px;
+  border: 2px solid;
+  text-align: center;
+} */
+.container {
+  margin: 30px;
+  font-family: "Arial";
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+  text-align: center;
+}
+
+.profile-picture {
+  border-radius: 60%;
+  box-align: center;
+  position: relative;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 456px) {
+  .grid {
+    position: relative;
+    flex-direction: column;
+  }
+  /* .image .profile-picture{
+    display: inline;
+    width: 100%;
+  } */
+}
+
+.education {
+  position: relative;
+  margin: 30px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+  text-align: center;
+}
+
+@media screen and (max-width: 456px) {
+  .education {
+    position: relative;
+    flex-direction: column;
+  }
+  /* .image .profile-picture{
+    display: inline;
+    width: 100%;
+  } */
+}
+
+.skills {
+  position: relative;
+  margin: 30px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  text-align: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 0 3px 10px grey;
+  padding: 20px;
+  margin: 10px;
+}
+
+.skills img:hover {
+  box-shadow: 0 3px 10px black;
+}
+
+.projects {
+  position: relative;
+  margin: 30px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  text-align: center;
+}
+.project-container {
+  text-align: center;
+  margin-left: 278px;
+}
+/* .projects {
+  width: 100%;
+  padding: 0px 20px;
+  margin-top: 2%;
+  align-items: center;
+} */
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  text-align: center;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+  position: relative;
+  font-family: "sans-serif";
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  .project-container {
+    margin-left: 0px;
+  }
+}
+
+.btn {
+  background: #f2f4f5;
+  background-color: #0d1321;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 2px 2px rgb(0, 0, 0);
+  padding: 5px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  text-decoration: none;
+}
+
+.column :hover {
+  box-shadow: 0px 3px 10px 0 black;
+}
+
+.column p:hover {
+  box-shadow: 0 0px 0px 0;
+}
+
+.column h5:hover {
+  box-shadow: 0 0px 0px 0;
+}
+
+.certificates {
+  position: relative;
+  margin: 30px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  text-align: center;
+}
+
+.contact {
+  position: relative;
+  margin: 30px;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  text-align: center;
+}
+
+.contact a {
+  border-radius: 0px;
+  border: 0px solid black;
+  display: inline-block;
+  margin: 12px;
+}
+
+.orderform {
+  position: relative;
+  margin-left: 500px;
+  text-align: center;
+  border-radius: 15px;
+  background-color: black;
+  padding: 20px;
+  width: 500px;
+  height: 650px;
+  box-shadow: 10px 10px 10px 10px #6f4e37;
+  color: white;
+  font-family: Explora;
+  font-weight: bold;
+  font-size: 32px;
+  animation: page-load 500ms ease-in;
+}
+
+input[type="text"],
+select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type="email"],
+select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 40%;
+  background-color: #00b5af;
+  color: white;
+  padding: 14px 20px;
+  margin-top: 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  margin-top: 25px;
+  background-color: #6f4e37;
+  border-radius: 15px 0px 20px 0px;
+}
+
+.form-style label input {
+  display: block;
+}
