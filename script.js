@@ -11,7 +11,7 @@ function addRecord() {
 
   var trCheckBoxCell = document.createElement("td");
   trCheckBoxCell.innerHTML =
-    '<input id="checkbox" type="checkbox" onclick="onCheckboxClick(this)"/><br/> <button onclick="showRecord(this)">check </button>';
+    '<input id="checkbox" type="checkbox" onclick="onCheckboxClick(this)"/><br/> <button id="down" onclick="showRecord(this)"><img src="./down.png"> </button>';
   var trStudentCell = document.createElement("td");
   var trAdvisorCell = document.createElement("td");
   var trAward = document.createElement("td");
@@ -79,7 +79,6 @@ function onCheckboxClick(checkbox) {
     // tableheaderRow
   } else {
     rowSelect.style.backgroundColor = "#fff";
-    //console.log("length", tableRow.length());
     selectedRows--;
     if (selectedRows == 0) {
       tableRow.deleteCell(9);
