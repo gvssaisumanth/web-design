@@ -11,7 +11,7 @@ function addRecord() {
 
   var trCheckBoxCell = document.createElement("td");
   trCheckBoxCell.innerHTML =
-    '<input id="checkbox" type="checkbox" onclick="onCheckboxClick(this)"/><br/> <button id="down" onclick="showRecord(this)"><img src="./down.png"> </button>';
+    '<input id="checkbox" type="checkbox" onclick="onCheckboxClick(this)"/><br/> <br/><img src="./down.png" onclick="showRecord(this)">';
   var trStudentCell = document.createElement("td");
   var trAdvisorCell = document.createElement("td");
   var trAward = document.createElement("td");
