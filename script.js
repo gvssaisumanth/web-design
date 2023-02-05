@@ -41,6 +41,7 @@ function addRecord() {
   tdNode.appendChild(trpercentage);
 
   tbodyRef.appendChild(tdNode);
+  alert("Student added successfully");
 }
 
 function onCheckboxClick(checkbox) {
