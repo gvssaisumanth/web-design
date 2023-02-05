@@ -20,7 +20,7 @@ function addRecord() {
   var trbudget = document.createElement("td");
   var trpercentage = document.createElement("td");
   trStudentCell.innerHTML = "Student " + (parseInt(latestIndex) + 1);
-  trAdvisorCell.innerHTML = "Author " + (parseInt(latestIndex) + 1);
+  trAdvisorCell.innerHTML = "Advisor " + (parseInt(latestIndex) + 1);
   trAward.innerHTML = "Approved";
   trsemester.innerHTML = "FALL";
   trtype.innerHTML = "TA";
