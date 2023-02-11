@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Feedback</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <main>
+        <h2>Feeback</h2>
+        <h3>Love something? Hate something? Let us know!</h3>
+        Note : Fields marked with an asterisk(*) are mandatory
+        <br /><br />
+        <form name="feedback" onsubmit="return false" method="POST">
+          <label>Title*:</label>
+          <input
+            type="radio"
+            name="title"
+            id="miss"
+            value="Miss"
+            required="required"
+          />Miss.
+          <input
+            type="radio"
+            name="title"
+            id="mr"
+            value="Mr"
+            required="required"
+          />Mr.
+          <input
+            type="radio"
+            name="title"
+            id="mrs"
+            value="Mrs"
+            required="required"
+          />Mrs. <br /><br />
+          <div id="btnError" style="display: none; color: red">
+            Please choose an option
+          </div>
+          <br /><br />
+
+          <label for="firstName">First Name*:</label>
+          <input
+            type="text"
+            name="firstName"
+            id="firstName"
+            placeholder="First Name"
+            required="required"
+            onblur="validateDetails(this,7,'fname')"
+          />
+          <br /><br />
+          <div id="fnameError" style="display: none; color: red">
+            Invalid input for your firstName. Only non-numeric permitted
+          </div>
+          <br /><br />
+
+          <label for="lastName">Last Name*:</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last Name"
+            required="required"
+            onblur="validateDetails(this,8,'lastname')"
+          />
+          <br /><br />
+          <div id="lnameError" style="display: none; color: red">
+            Invalid input for your lastName name. Only non-numeric permitted
+          </div>
+          <br /><br />
+
+          <label for="emailId">Email Id*:</label>
+          <input
+            type="text"
+            name="emailId"
+            id="emailId"
+            placeholder="yourname@domain.com"
+            required="required"
+            onblur="validateDetails(this,1,'EmailId')"
+          />
+          <br /><br />
+          <div id="emailError" style="display: none; color: red">
+            Invalid email id. Please enter your northeastern mail Id.
+          </div>
+          <br /><br />
+          <label for="phoneNumber">Phone Number*:</label>
+          <input
+            type="text"
+            name="phoneNumber"
+            id="phoneNumber"
+            placeholder="xxx-xxx-xxxx"
+            required="required"
+            onblur="validateDetails(this,2,'Phone')"
+          />
+          <br /><br />
+          <div id="phoneError" style="display: none; color: red">
+            Invalid phone number. Only 10 digit numeric value is permitted in
+            xxx-xxx-xxxx format
+          </div>
+          <br /><br />
+
+          <label for="streetAddress1">Street Address 1*:</label>
+          <input
+            type="text"
+            name="streetAddress1"
+            id="streetAddress1"
+            placeholder="address"
+            required="required"
+            onblur="validateDetails(this,3,'StreetAddr1')"
+          />
+          <br /><br />
+          <div id="streetAdd1Error" style="display: none; color: red">
+            Invalid. streetAddress1 is mandatory
+          </div>
+          <br /><br />
+
+          <label for="streetAddress2">Street Address 2:</label>
+          <input
+            type="text"
+            name="streetAddress2"
+            id="streetAddress2"
+            placeholder="address"
+          />
+          <br /><br />
+
+          <label for="city">City*:</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="city"
+            required="required"
+            onblur="validateDetails(this,4,'City')"
+          />
+          <br /><br />
+          <div id="cityError" style="display: none; color: red">
+            Invalid. City is mandatory
+          </div>
+          <br /><br />
+
+          <label for="state">State*:</label>
+          <input
+            type="text"
+            name="state"
+            id="state"
+            placeholder="state"
+            required="required"
+            onblur="validateDetails(this,6,'State')"
+          />
+          <br /><br />
+          <div id="stateError" style="display: none; color: red">
+            Invalid. State is mandatory
+          </div>
+          <br /><br />
+
+          <label for="zipcode">ZipCode*:</label>
+          <input
+            type="text"
+            name="zipcode"
+            id="zipcode"
+            placeholder="xxxxxx"
+            required="required"
+            onblur="validateDetails(this,5,'Zip')"
+          />
+          <br /><br />
+          <div id="zipError" style="display: none; color: red">
+            Invalid Zipcode. Only numeric values are permitted
+          </div>
+          <br /><br />
+          <label for="hear">How did you hear: *</label>
+
+          <input
+            type="checkbox"
+            name="social"
+            value="google"
+            id="google"
+            onchange="onCheck(this)"
+            onblur="validateDetails(this,11,'social')"
+          />
+          Google
+          <input
+            type="checkbox"
+            name="social"
+            value="facebook"
+            id="facebook"
+            onchange="onCheck(this)"
+            onblur="validateDetails(this,11,'social')"
+          />
+          Facebook
+          <input
+            type="checkbox"
+            name="social"
+            value="yelp"
+            id="yelp"
+            onchange="onCheck(this)"
+            onblur="validateDetails(this,11,'social')"
+          />
+          Yelp <br /><br />
+          <div id="socialError" style="display: none; color: red">
+            Select atleast one platform
+          </div>
+          <br /><br />
+
+          <label for="comments">Comments*: </label>
+          <textarea
+            name="text"
+            id="comments"
+            placeholder="Your comments"
+            rows="5"
+            cols="25"
+            onblur="validateDetails(this,10,'comment')"
+          ></textarea>
+          <br /><br />
+          <div id="commentsError" style="display: none; color: red">
+            Comments can't be empty
+          </div>
+          <br /><br />
+
+          <label for="beverages">Choose Your Drink*: </label>
+
+          <select
+            name="beverages"
+            class="beverages"
+            id="beverages"
+            onchange="dropDown()"
+          >
+            <option disabled selected value>Select an Option</option>
+            <option value="Coke">Coke</option>
+            <option value="Diet Coke">Diet Coke</option>
+            <option value="Coke Zero">Coke Zero</option>
+            <option value="Sprite">Sprite</option>
+            <option value="Fanta">Fanta</option>
+          </select>
+          <br /><br />
+          <div id="drinks" style="display: none">
+            <div id="check1" style="display: none">
+              <input
+                type="checkbox"
+                id="Small"
+                name="drink"
+                value="A"
+                onchange="onCheck(this)"
+              />
+              <label for="drink1"> Small ($2 extra)</label><br />
+              <br />
+            </div>
+            <div id="check2" style="display: none">
+              <input
+                type="checkbox"
+                id="Medium"
+                name="drink"
+                value="B"
+                onchange="onCheck(this)"
+              />
+
+              <label for="drink2"> Medium ($2.25 extra)</label><br />
+              <br />
+            </div>
+            <div id="check3" style="display: none">
+              <input
+                type="checkbox"
+                id="Large"
+                name="drink"
+                value="C"
+                onchange="onCheck(this)"
+              />
+
+              <label for="drink3"> Large ($3 extra)</label><br />
+              <br />
+            </div>
+            <div id="check4" style="display: none">
+              <input
+                type="checkbox"
+                id="Extra Large"
+                name="drink"
+                value="D"
+                onchange="onCheck(this)"
+              />
+              <label for="drink4"> Extra ($3 extra)</label><br />
+              <br />
+            </div>
+          </div>
+          <div id="addtextField" style="display: none">
+            <br /><br />
+            <label for="addInfo">Additional Customization*:</label>
+            <input
+              type="text"
+              name="addInfo"
+              id="addInfo"
+              placeholder="Description"
+              required="required"
+              onblur="validateDetails(this,9,'addInfo')"
+            />
+            <br /><br />
+            <div id="addError" style="display: none; color: red">
+              This field cannot be blank
+            </div>
+            <br /><br />
+          </div>
+          <input
+            type="Submit"
+            value="Submit"
+            id="btnSubmit"
+            onclick="onSubmit()"
+          />
+          <input type="Reset" />
+          <br /><br />
+        </form>
+      </main>
+    </div>
+
+    <div style="overflow-x: auto; margin-top: 50px">
+      <table id="mytable" style="display: none">
+        <tr>
+          <th>Title</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email ID</th>
+          <th>Phone Number</th>
+          <th>Street1</th>
+          <th>Street 2</th>
+          <th>City</th>
+          <th>State</th>
+          <th>ZipCode</th>
+          <th>How did you hear</th>
+          <th>Comments</th>
+          <th>Drink</th>
+          <th>Size</th>
+          <th>Additional Info</th>
+        </tr>
+      </table>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

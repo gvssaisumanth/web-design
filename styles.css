@@ -1,0 +1,40 @@
+label {
+  float: left;
+  width: 150px;
+}
+
+#container {
+  width: 850px;
+  margin: auto;
+  background-color: beige;
+}
+
+main {
+  padding: 50px;
+}
+
+#mytable {
+  text-align: center;
+
+  width: 100%;
+}
+#mytable thead {
+  background-color: grey;
+  color: #fff;
+}
+#mytable th {
+  padding: 5px;
+}
+#mytable td {
+  padding: 5px;
+}
+#mytable,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#mytable th {
+  background-color: gray;
+}
